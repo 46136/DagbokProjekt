@@ -23,10 +23,12 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnNyttPass = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.btnAktiviteter = New System.Windows.Forms.Button()
+        Me.btnOvningar = New System.Windows.Forms.Button()
+        Me.btnTaBort = New System.Windows.Forms.Button()
+        Me.btnRedigera = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.btnExpandList = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnNyttPass
@@ -38,51 +40,70 @@ Partial Class Form1
         Me.btnNyttPass.Text = "Nytt Pass"
         Me.btnNyttPass.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnAktiviteter
         '
-        Me.Button2.Location = New System.Drawing.Point(340, 41)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnAktiviteter.Location = New System.Drawing.Point(340, 41)
+        Me.btnAktiviteter.Name = "btnAktiviteter"
+        Me.btnAktiviteter.Size = New System.Drawing.Size(75, 23)
+        Me.btnAktiviteter.TabIndex = 1
+        Me.btnAktiviteter.Text = "Aktiviteter"
+        Me.btnAktiviteter.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnOvningar
         '
-        Me.Button3.Location = New System.Drawing.Point(340, 70)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnOvningar.Location = New System.Drawing.Point(340, 70)
+        Me.btnOvningar.Name = "btnOvningar"
+        Me.btnOvningar.Size = New System.Drawing.Size(75, 23)
+        Me.btnOvningar.TabIndex = 2
+        Me.btnOvningar.Text = "Övningar"
+        Me.btnOvningar.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnTaBort
         '
-        Me.Button4.Location = New System.Drawing.Point(340, 176)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnTaBort.Location = New System.Drawing.Point(340, 176)
+        Me.btnTaBort.Name = "btnTaBort"
+        Me.btnTaBort.Size = New System.Drawing.Size(75, 23)
+        Me.btnTaBort.TabIndex = 3
+        Me.btnTaBort.Text = "Ta Bort"
+        Me.btnTaBort.UseVisualStyleBackColor = True
         '
-        'Button5
+        'btnRedigera
         '
-        Me.Button5.Location = New System.Drawing.Point(12, 176)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnRedigera.Location = New System.Drawing.Point(246, 176)
+        Me.btnRedigera.Name = "btnRedigera"
+        Me.btnRedigera.Size = New System.Drawing.Size(75, 23)
+        Me.btnRedigera.TabIndex = 4
+        Me.btnRedigera.Text = "Redigera"
+        Me.btnRedigera.UseVisualStyleBackColor = True
+        '
+        'ListView1
+        '
+        Me.ListView1.Location = New System.Drawing.Point(12, 12)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(228, 182)
+        Me.ListView1.TabIndex = 5
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
+        'btnExpandList
+        '
+        Me.btnExpandList.Location = New System.Drawing.Point(210, 12)
+        Me.btnExpandList.Name = "btnExpandList"
+        Me.btnExpandList.Size = New System.Drawing.Size(30, 23)
+        Me.btnExpandList.TabIndex = 6
+        Me.btnExpandList.Text = "+"
+        Me.btnExpandList.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(420, 206)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnExpandList)
+        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.btnRedigera)
+        Me.Controls.Add(Me.btnTaBort)
+        Me.Controls.Add(Me.btnOvningar)
+        Me.Controls.Add(Me.btnAktiviteter)
         Me.Controls.Add(Me.btnNyttPass)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -91,8 +112,10 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents btnNyttPass As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents btnAktiviteter As Button
+    Friend WithEvents btnOvningar As Button
+    Friend WithEvents btnTaBort As Button
+    Friend WithEvents btnRedigera As Button
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents btnExpandList As Button
 End Class
