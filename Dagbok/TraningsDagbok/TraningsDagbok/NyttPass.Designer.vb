@@ -22,7 +22,7 @@ Partial Class NyttPass
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lstOvningar = New System.Windows.Forms.ListBox()
         Me.btnSpara = New System.Windows.Forms.Button()
         Me.btnLaggTill = New System.Windows.Forms.Button()
         Me.btnTabort = New System.Windows.Forms.Button()
@@ -33,16 +33,19 @@ Partial Class NyttPass
         Me.txtRep = New System.Windows.Forms.TextBox()
         Me.txtVikt = New System.Windows.Forms.TextBox()
         Me.txtLangd = New System.Windows.Forms.TextBox()
+        Me.rtbAnteckningars = New System.Windows.Forms.RichTextBox()
+        Me.txtRPE = New System.Windows.Forms.TextBox()
+        Me.txtReplace = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'ListBox1
+        'lstOvningar
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(202, 11)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(324, 214)
-        Me.ListBox1.TabIndex = 0
+        Me.lstOvningar.FormattingEnabled = True
+        Me.lstOvningar.ItemHeight = 15
+        Me.lstOvningar.Location = New System.Drawing.Point(332, 11)
+        Me.lstOvningar.Name = "lstOvningar"
+        Me.lstOvningar.Size = New System.Drawing.Size(194, 214)
+        Me.lstOvningar.TabIndex = 0
         '
         'btnSpara
         '
@@ -64,7 +67,7 @@ Partial Class NyttPass
         '
         'btnTabort
         '
-        Me.btnTabort.Location = New System.Drawing.Point(93, 206)
+        Me.btnTabort.Location = New System.Drawing.Point(251, 206)
         Me.btnTabort.Name = "btnTabort"
         Me.btnTabort.Size = New System.Drawing.Size(75, 23)
         Me.btnTabort.TabIndex = 12
@@ -73,7 +76,7 @@ Partial Class NyttPass
         '
         'btnRedigera
         '
-        Me.btnRedigera.Location = New System.Drawing.Point(93, 177)
+        Me.btnRedigera.Location = New System.Drawing.Point(251, 177)
         Me.btnRedigera.Name = "btnRedigera"
         Me.btnRedigera.Size = New System.Drawing.Size(75, 23)
         Me.btnRedigera.TabIndex = 11
@@ -122,17 +125,44 @@ Partial Class NyttPass
         '
         'txtLangd
         '
-        Me.txtLangd.Location = New System.Drawing.Point(108, 11)
+        Me.txtLangd.Location = New System.Drawing.Point(108, 27)
         Me.txtLangd.Name = "txtLangd"
-        Me.txtLangd.Size = New System.Drawing.Size(88, 23)
+        Me.txtLangd.Size = New System.Drawing.Size(90, 23)
         Me.txtLangd.TabIndex = 18
-        Me.txtLangd.Text = """Längd i Min"""
+        Me.txtLangd.Text = "Pass Längd(min)"
+        '
+        'rtbAnteckningars
+        '
+        Me.rtbAnteckningars.Location = New System.Drawing.Point(108, 56)
+        Me.rtbAnteckningars.Name = "rtbAnteckningars"
+        Me.rtbAnteckningars.Size = New System.Drawing.Size(209, 96)
+        Me.rtbAnteckningars.TabIndex = 19
+        Me.rtbAnteckningars.Text = """Anteckningar"""
+        '
+        'txtRPE
+        '
+        Me.txtRPE.Location = New System.Drawing.Point(229, 27)
+        Me.txtRPE.Name = "txtRPE"
+        Me.txtRPE.Size = New System.Drawing.Size(88, 23)
+        Me.txtRPE.TabIndex = 20
+        Me.txtRPE.Text = """Ansträngning"" 1-10"
+        '
+        'txtReplace
+        '
+        Me.txtReplace.Location = New System.Drawing.Point(157, 177)
+        Me.txtReplace.Name = "txtReplace"
+        Me.txtReplace.Size = New System.Drawing.Size(88, 23)
+        Me.txtReplace.TabIndex = 21
+        Me.txtReplace.Text = """Nytt värde"""
         '
         'NyttPass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(535, 233)
+        Me.Controls.Add(Me.txtReplace)
+        Me.Controls.Add(Me.txtRPE)
+        Me.Controls.Add(Me.rtbAnteckningars)
         Me.Controls.Add(Me.txtLangd)
         Me.Controls.Add(Me.txtVikt)
         Me.Controls.Add(Me.txtRep)
@@ -143,7 +173,7 @@ Partial Class NyttPass
         Me.Controls.Add(Me.btnRedigera)
         Me.Controls.Add(Me.btnSpara)
         Me.Controls.Add(Me.btnLaggTill)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.lstOvningar)
         Me.Name = "NyttPass"
         Me.Text = "NyttPass"
         Me.ResumeLayout(False)
@@ -151,7 +181,7 @@ Partial Class NyttPass
 
     End Sub
 
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lstOvningar As ListBox
     Friend WithEvents btnSpara As Button
     Friend WithEvents btnLaggTill As Button
     Friend WithEvents btnTabort As Button
@@ -162,4 +192,7 @@ Partial Class NyttPass
     Friend WithEvents txtRep As TextBox
     Friend WithEvents txtVikt As TextBox
     Friend WithEvents txtLangd As TextBox
+    Friend WithEvents rtbAnteckningars As RichTextBox
+    Friend WithEvents txtRPE As TextBox
+    Friend WithEvents txtReplace As TextBox
 End Class
