@@ -16,3 +16,5 @@ C:\GIT\DagbokProjekt\Dagbok\TraningsDagbok\TraningsDagbok\obj\Debug\net6.0-windo
 C:\GIT\DagbokProjekt\Dagbok\TraningsDagbok\TraningsDagbok\obj\Debug\net6.0-windows\TraningsDagbok.pdb
 C:\GIT\DagbokProjekt\Dagbok\TraningsDagbok\TraningsDagbok\obj\Debug\net6.0-windows\TraningsDagbok.genruntimeconfig.cache
 C:\GIT\DagbokProjekt\Dagbok\TraningsDagbok\TraningsDagbok\obj\Debug\net6.0-windows\ref\TraningsDagbok.dll
+C:\GIT\DagbokProjekt\Dagbok\TraningsDagbok\TraningsDagbok\obj\Debug\net6.0-windows\TraningsDagbok.Ovningar.resources
+C:\GIT\DagbokProjekt\Dagbok\TraningsDagbok\TraningsDagbok\obj\Debug\net6.0-windows\TraningsDagbok.Aktiviteter.resources
