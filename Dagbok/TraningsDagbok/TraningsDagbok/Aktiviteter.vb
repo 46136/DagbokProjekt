@@ -2,7 +2,7 @@
 Public Class Aktiviteter
 
     Private Sub Aktiviteter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=C:\GIT\DagbokProjekt\Dagbok.accdb")
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         conn.Open()
         Dim cmd As New OleDbCommand("Select Aktivitet from Aktiviteter", conn)
         Dim myreader As OleDbDataReader = cmd.ExecuteReader

@@ -96,8 +96,8 @@ Partial Class NyttPass
         Me.cbOvning.Location = New System.Drawing.Point(12, 42)
         Me.cbOvning.Name = "cbOvning"
         Me.cbOvning.Size = New System.Drawing.Size(88, 23)
+        Me.cbOvning.Sorted = True
         Me.cbOvning.TabIndex = 14
-        Me.cbOvning.Text = "Övning"
         '
         'txtSet
         '
