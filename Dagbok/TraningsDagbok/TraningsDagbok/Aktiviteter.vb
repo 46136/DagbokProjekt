@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Public Class Aktiviteter
 
-    Private Sub Aktiviteter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub Aktiviteter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         conn.Open()
         Dim cmd As New OleDbCommand("Select Aktivitet from Aktiviteter", conn)
@@ -11,10 +11,26 @@ Public Class Aktiviteter
             lstAktiviteter.Items.Add(myreader("Aktivitet"))
         End While
         conn.Close()
+
+        'Auto select första item i ComboBox
+        If lstAktiviteter.Items.Count > 0 Then
+            lstAktiviteter.SelectedIndex = 0
+        End If
     End Sub
 
     Public Sub btnLaggTillAktivitet_Click(sender As Object, e As EventArgs) Handles btnLaggTillAktivitet.Click
+        'Lägger till nya aktiviteten i listan
         lstAktiviteter.Items.Add(txtAktivitet.Text)
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
+        conn.Open()
+        Dim cmd As New OleDb.OleDbCommand
+        Dim sql As String
+
+        sql = "INSERT INTO Aktiviteter(Aktivitet) VALUES('" & Me.txtAktivitet.Text & "')"
+        cmd = New OleDb.OleDbCommand(sql, conn)
+        cmd.ExecuteNonQuery()
+
+        conn.Close()
 
     End Sub
 
