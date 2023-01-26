@@ -27,8 +27,8 @@ Partial Class Form1
         Me.btnOvningar = New System.Windows.Forms.Button()
         Me.btnTaBort = New System.Windows.Forms.Button()
         Me.btnRedigera = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.btnExpandList = New System.Windows.Forms.Button()
+        Me.lstGammlaPass = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'btnNyttPass
@@ -76,14 +76,6 @@ Partial Class Form1
         Me.btnRedigera.Text = "Redigera"
         Me.btnRedigera.UseVisualStyleBackColor = True
         '
-        'ListView1
-        '
-        Me.ListView1.Location = New System.Drawing.Point(12, 12)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(228, 182)
-        Me.ListView1.TabIndex = 5
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
         'btnExpandList
         '
         Me.btnExpandList.Location = New System.Drawing.Point(210, 12)
@@ -93,13 +85,22 @@ Partial Class Form1
         Me.btnExpandList.Text = "+"
         Me.btnExpandList.UseVisualStyleBackColor = True
         '
+        'lstGammlaPass
+        '
+        Me.lstGammlaPass.FormattingEnabled = True
+        Me.lstGammlaPass.ItemHeight = 15
+        Me.lstGammlaPass.Location = New System.Drawing.Point(9, 5)
+        Me.lstGammlaPass.Name = "lstGammlaPass"
+        Me.lstGammlaPass.Size = New System.Drawing.Size(195, 184)
+        Me.lstGammlaPass.TabIndex = 7
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(420, 206)
+        Me.Controls.Add(Me.lstGammlaPass)
         Me.Controls.Add(Me.btnExpandList)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.btnRedigera)
         Me.Controls.Add(Me.btnTaBort)
         Me.Controls.Add(Me.btnOvningar)
@@ -116,6 +117,6 @@ Partial Class Form1
     Friend WithEvents btnOvningar As Button
     Friend WithEvents btnTaBort As Button
     Friend WithEvents btnRedigera As Button
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents btnExpandList As Button
+    Friend WithEvents lstGammlaPass As ListBox
 End Class

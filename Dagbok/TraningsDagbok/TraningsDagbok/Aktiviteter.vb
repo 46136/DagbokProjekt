@@ -2,6 +2,7 @@
 Public Class Aktiviteter
 
     Public Sub Aktiviteter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Databaskoppling
         Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         conn.Open()
         Dim cmd As New OleDbCommand("Select Aktivitet from Aktiviteter", conn)
@@ -21,11 +22,14 @@ Public Class Aktiviteter
     Public Sub btnLaggTillAktivitet_Click(sender As Object, e As EventArgs) Handles btnLaggTillAktivitet.Click
         'Lägger till nya aktiviteten i listan
         lstAktiviteter.Items.Add(txtAktivitet.Text)
+
+        'Databas koppling
         Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         conn.Open()
         Dim cmd As New OleDb.OleDbCommand
         Dim sql As String
 
+        'Fyller databas fälten med infon från applikationens fällt
         sql = "INSERT INTO Aktiviteter(Aktivitet) VALUES('" & Me.txtAktivitet.Text & "')"
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()

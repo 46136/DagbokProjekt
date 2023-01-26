@@ -37,9 +37,9 @@ Public Class NyttPass
     Private Sub btnLaggTill_Click(sender As Object, e As EventArgs) Handles btnLaggTill.Click
         'Lägger till info i "Aktivt pass"
         lstOvningar.Items.Add(cbOvning.Text)
-        lstOvningar.Items.Add(txtSet.Text + " set")
-        lstOvningar.Items.Add(txtRep.Text + " rep")
-        lstOvningar.Items.Add(txtVikt.Text + " Kg")
+        lstOvningar.Items.Add(cbRep.Text)
+        lstOvningar.Items.Add(cbSet.Text)
+        lstOvningar.Items.Add(cbVikt.Text)
         lstOvningar.Items.Add(" ")
     End Sub
 
@@ -47,11 +47,25 @@ Public Class NyttPass
         'Lägger till info i "Aktivt pass" NÄR MAN SPARAR
         lstOvningar.Items.Add(dtpDatum.Text)
         lstOvningar.Items.Add(rtbAnteckningars.Text)
-        lstOvningar.Items.Add(txtRPE.Text + " rpe")
-        lstOvningar.Items.Add(txtLangd.Text + " Min")
+        lstOvningar.Items.Add(cbRpe.Text)
+        lstOvningar.Items.Add(txtLangd.Text)
 
-        'Lägg till databas koppling
+        'Databas koppling
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
+        conn.Open()
+        Dim cmd As New OleDb.OleDbCommand
+        Dim sql As String
 
+        'Fyller databas fälten med infon från applikationens fällt
+        sql = "INSERT INTO Traning " _
+        & "(Ovning,Sat,Rep,Vikt,Datum,Anteckning,Tid, rpe ) VALUES " _
+        & "('" & Me.cbOvning.Text & "'," & Me.cbSet.Text & "," & Me.cbRep.Text & "," _
+        & Me.cbVikt.Text & ",'" & Me.dtpDatum.ToString & "','" & Me.rtbAnteckningars.Text & "','" _
+        & Me.txtLangd.Text & "', '" & Me.cbRpe.Text & "');"
+        cmd = New OleDb.OleDbCommand(sql, conn)
+        cmd.ExecuteNonQuery()
+        MsgBox("Sparat!")
+        conn.Close()
     End Sub
 
     Private Sub btnTabort_Click(sender As Object, e As EventArgs) Handles btnTabort.Click

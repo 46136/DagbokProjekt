@@ -29,13 +29,13 @@ Partial Class NyttPass
         Me.btnRedigera = New System.Windows.Forms.Button()
         Me.dtpDatum = New System.Windows.Forms.DateTimePicker()
         Me.cbOvning = New System.Windows.Forms.ComboBox()
-        Me.txtSet = New System.Windows.Forms.TextBox()
-        Me.txtRep = New System.Windows.Forms.TextBox()
-        Me.txtVikt = New System.Windows.Forms.TextBox()
         Me.txtLangd = New System.Windows.Forms.TextBox()
         Me.rtbAnteckningars = New System.Windows.Forms.RichTextBox()
-        Me.txtRPE = New System.Windows.Forms.TextBox()
         Me.txtReplace = New System.Windows.Forms.TextBox()
+        Me.cbRep = New System.Windows.Forms.ComboBox()
+        Me.cbSet = New System.Windows.Forms.ComboBox()
+        Me.cbVikt = New System.Windows.Forms.ComboBox()
+        Me.cbRpe = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lstOvningar
@@ -86,6 +86,7 @@ Partial Class NyttPass
         'dtpDatum
         '
         Me.dtpDatum.Location = New System.Drawing.Point(12, 12)
+        Me.dtpDatum.MinDate = New Date(2020, 1, 1, 0, 0, 0, 0)
         Me.dtpDatum.Name = "dtpDatum"
         Me.dtpDatum.Size = New System.Drawing.Size(88, 23)
         Me.dtpDatum.TabIndex = 13
@@ -98,30 +99,7 @@ Partial Class NyttPass
         Me.cbOvning.Size = New System.Drawing.Size(88, 23)
         Me.cbOvning.Sorted = True
         Me.cbOvning.TabIndex = 14
-        '
-        'txtSet
-        '
-        Me.txtSet.Location = New System.Drawing.Point(12, 71)
-        Me.txtSet.Name = "txtSet"
-        Me.txtSet.Size = New System.Drawing.Size(88, 23)
-        Me.txtSet.TabIndex = 15
-        Me.txtSet.Text = """SET"""
-        '
-        'txtRep
-        '
-        Me.txtRep.Location = New System.Drawing.Point(12, 100)
-        Me.txtRep.Name = "txtRep"
-        Me.txtRep.Size = New System.Drawing.Size(88, 23)
-        Me.txtRep.TabIndex = 16
-        Me.txtRep.Text = """REP"""
-        '
-        'txtVikt
-        '
-        Me.txtVikt.Location = New System.Drawing.Point(12, 129)
-        Me.txtVikt.Name = "txtVikt"
-        Me.txtVikt.Size = New System.Drawing.Size(88, 23)
-        Me.txtVikt.TabIndex = 17
-        Me.txtVikt.Text = """VIKT"""
+        Me.cbOvning.Text = """ovning"""
         '
         'txtLangd
         '
@@ -139,14 +117,6 @@ Partial Class NyttPass
         Me.rtbAnteckningars.TabIndex = 19
         Me.rtbAnteckningars.Text = """Anteckningar"""
         '
-        'txtRPE
-        '
-        Me.txtRPE.Location = New System.Drawing.Point(229, 27)
-        Me.txtRPE.Name = "txtRPE"
-        Me.txtRPE.Size = New System.Drawing.Size(88, 23)
-        Me.txtRPE.TabIndex = 20
-        Me.txtRPE.Text = """Ansträngning"" 1-10"
-        '
         'txtReplace
         '
         Me.txtReplace.Location = New System.Drawing.Point(157, 177)
@@ -155,18 +125,58 @@ Partial Class NyttPass
         Me.txtReplace.TabIndex = 21
         Me.txtReplace.Text = """Nytt värde"""
         '
+        'cbRep
+        '
+        Me.cbRep.FormattingEnabled = True
+        Me.cbRep.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"})
+        Me.cbRep.Location = New System.Drawing.Point(12, 71)
+        Me.cbRep.Name = "cbRep"
+        Me.cbRep.Size = New System.Drawing.Size(88, 23)
+        Me.cbRep.TabIndex = 22
+        Me.cbRep.Text = """reps"""
+        '
+        'cbSet
+        '
+        Me.cbSet.FormattingEnabled = True
+        Me.cbSet.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"})
+        Me.cbSet.Location = New System.Drawing.Point(12, 100)
+        Me.cbSet.Name = "cbSet"
+        Me.cbSet.Size = New System.Drawing.Size(88, 23)
+        Me.cbSet.TabIndex = 23
+        Me.cbSet.Text = """sets"""
+        '
+        'cbVikt
+        '
+        Me.cbVikt.FormattingEnabled = True
+        Me.cbVikt.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"})
+        Me.cbVikt.Location = New System.Drawing.Point(12, 129)
+        Me.cbVikt.Name = "cbVikt"
+        Me.cbVikt.Size = New System.Drawing.Size(88, 23)
+        Me.cbVikt.TabIndex = 24
+        Me.cbVikt.Text = """vikt"""
+        '
+        'cbRpe
+        '
+        Me.cbRpe.FormattingEnabled = True
+        Me.cbRpe.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"})
+        Me.cbRpe.Location = New System.Drawing.Point(229, 27)
+        Me.cbRpe.Name = "cbRpe"
+        Me.cbRpe.Size = New System.Drawing.Size(88, 23)
+        Me.cbRpe.TabIndex = 25
+        Me.cbRpe.Text = """rpe"""
+        '
         'NyttPass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(535, 233)
+        Me.Controls.Add(Me.cbRpe)
+        Me.Controls.Add(Me.cbVikt)
+        Me.Controls.Add(Me.cbSet)
+        Me.Controls.Add(Me.cbRep)
         Me.Controls.Add(Me.txtReplace)
-        Me.Controls.Add(Me.txtRPE)
         Me.Controls.Add(Me.rtbAnteckningars)
         Me.Controls.Add(Me.txtLangd)
-        Me.Controls.Add(Me.txtVikt)
-        Me.Controls.Add(Me.txtRep)
-        Me.Controls.Add(Me.txtSet)
         Me.Controls.Add(Me.cbOvning)
         Me.Controls.Add(Me.dtpDatum)
         Me.Controls.Add(Me.btnTabort)
@@ -188,11 +198,11 @@ Partial Class NyttPass
     Friend WithEvents btnRedigera As Button
     Friend WithEvents dtpDatum As DateTimePicker
     Friend WithEvents cbOvning As ComboBox
-    Friend WithEvents txtSet As TextBox
-    Friend WithEvents txtRep As TextBox
-    Friend WithEvents txtVikt As TextBox
     Friend WithEvents txtLangd As TextBox
     Friend WithEvents rtbAnteckningars As RichTextBox
-    Friend WithEvents txtRPE As TextBox
     Friend WithEvents txtReplace As TextBox
+    Friend WithEvents cbRep As ComboBox
+    Friend WithEvents cbSet As ComboBox
+    Friend WithEvents cbVikt As ComboBox
+    Friend WithEvents cbRpe As ComboBox
 End Class
