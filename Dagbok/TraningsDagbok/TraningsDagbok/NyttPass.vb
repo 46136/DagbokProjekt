@@ -7,7 +7,9 @@ Public Class NyttPass
     Private Sub NyttPass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Connection för ACCESS databas
-        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb")
+        'C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas.accdb
+        'c:\GIT\DagbokProjekt\Databas\Dagbok.accdb
         conn.Open()
         Dim cmd As New OleDbCommand("Select Ovning from Ovningar", conn)
         Dim myreader As OleDbDataReader = cmd.ExecuteReader
@@ -35,6 +37,7 @@ Public Class NyttPass
     End Sub
 
     Private Sub btnLaggTill_Click(sender As Object, e As EventArgs) Handles btnLaggTill.Click
+
         'Lägger till info i "Aktivt pass"
         lstOvningar.Items.Add(cbOvning.Text)
         lstOvningar.Items.Add(cbRep.Text)
@@ -44,6 +47,7 @@ Public Class NyttPass
     End Sub
 
     Private Sub btnSpara_Click(sender As Object, e As EventArgs) Handles btnSpara.Click
+
         'Lägger till info i "Aktivt pass" NÄR MAN SPARAR
         lstOvningar.Items.Add(dtpDatum.Text)
         lstOvningar.Items.Add(rtbAnteckningars.Text)
@@ -51,17 +55,26 @@ Public Class NyttPass
         lstOvningar.Items.Add(txtLangd.Text)
 
         'Databas koppling
-        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb")
+        'C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb
+        'c:\GIT\DagbokProjekt\Databas\Dagbok.accdb
         conn.Open()
         Dim cmd As New OleDb.OleDbCommand
         Dim sql As String
 
-        'Fyller databas fälten med infon från applikationens fällt
+        'Fyller databas med infon från applikationens fällt
         sql = "INSERT INTO Traning " _
-        & "(Ovning,Sat,Rep,Vikt,Datum,Anteckning,Tid, rpe ) VALUES " _
-        & "('" & Me.cbOvning.Text & "'," & Me.cbSet.Text & "," & Me.cbRep.Text & "," _
-        & Me.cbVikt.Text & ",'" & Me.dtpDatum.ToString & "','" & Me.rtbAnteckningars.Text & "','" _
-        & Me.txtLangd.Text & "', '" & Me.cbRpe.Text & "');"
+        &"(Ovning,Sat,Rep,Vikt,Datum,Anteckning,Tid, rpe ) VALUES " _
+        & "('" _
+        & Me.cbOvning.Text & "'," _
+        & Me.cbSet.Text & "," _
+        & Me.cbRep.Text & "," _
+        & Me.cbVikt.Text & ",'" _
+        & Me.dtpDatum.ToString & "','" _
+        & Me.rtbAnteckningars.Text & "','" _
+        & Me.txtLangd.Text & "', '" _
+        & Me.cbRpe.Text & "');"
+
         cmd = New OleDb.OleDbCommand(sql, conn)
         cmd.ExecuteNonQuery()
         MsgBox("Sparat!")

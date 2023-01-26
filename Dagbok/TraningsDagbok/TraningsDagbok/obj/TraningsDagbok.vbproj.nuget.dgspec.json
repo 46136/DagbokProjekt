@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GIT\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\TraningsDagbok.vbproj": {}
+    "C:\\Users\\Danie\\Documents\\GitHub\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\TraningsDagbok.vbproj": {}
   },
   "projects": {
-    "C:\\GIT\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\TraningsDagbok.vbproj": {
+    "C:\\Users\\Danie\\Documents\\GitHub\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\TraningsDagbok.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GIT\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\TraningsDagbok.vbproj",
+        "projectUniqueName": "C:\\Users\\Danie\\Documents\\GitHub\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\TraningsDagbok.vbproj",
         "projectName": "TraningsDagbok",
-        "projectPath": "C:\\GIT\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\TraningsDagbok.vbproj",
-        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\GIT\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\obj\\",
+        "projectPath": "C:\\Users\\Danie\\Documents\\GitHub\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\TraningsDagbok.vbproj",
+        "packagesPath": "C:\\Users\\Danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danie\\Documents\\GitHub\\DagbokProjekt\\Dagbok\\TraningsDagbok\\TraningsDagbok\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
