@@ -3,7 +3,7 @@ Public Class Aktiviteter
 
     Public Sub Aktiviteter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Databaskoppling
-        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb")
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         'C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas.accdb
         'c:\GIT\DagbokProjekt\Databas\Dagbok.accdb
         conn.Open()
@@ -22,7 +22,6 @@ Public Class Aktiviteter
         End If
     End Sub
 
-
     Private Sub Ovningar_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
@@ -32,7 +31,7 @@ Public Class Aktiviteter
         lstAktiviteter.Items.Add(txtAktivitet.Text)
 
         'Databas koppling
-        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb")
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         'C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas.accdb
         'c:\GIT\DagbokProjekt\Databas\Dagbok.accdb
         conn.Open()

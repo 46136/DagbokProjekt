@@ -6,10 +6,11 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class NyttPass
     Private Sub NyttPass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'Connection för ACCESS databas
-        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb")
         'C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas.accdb
         'c:\GIT\DagbokProjekt\Databas\Dagbok.accdb
+
+        'Connection för ACCESS databas
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         conn.Open()
         Dim cmd As New OleDbCommand("Select Ovning from Ovningar", conn)
         Dim myreader As OleDbDataReader = cmd.ExecuteReader
@@ -55,7 +56,7 @@ Public Class NyttPass
         lstOvningar.Items.Add(txtLangd.Text)
 
         'Databas koppling
-        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb")
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         'C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb
         'c:\GIT\DagbokProjekt\Databas\Dagbok.accdb
         conn.Open()

@@ -2,7 +2,7 @@
 
 Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb")
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         'C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas\Dagbok.accdb
         'c:\GIT\DagbokProjekt\Databas\Dagbok.accdb
         conn.Open()
