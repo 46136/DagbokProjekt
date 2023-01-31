@@ -11,6 +11,7 @@ Public Class Aktiviteter
         Dim myreader As OleDbDataReader = cmd.ExecuteReader
         lstAktiviteter.Items.Clear()
 
+        'Fyller Comboboxen med datan
         While myreader.Read
             ID = myreader("ID")
             Dim Aktivitet As String = myreader("Aktivitet")
@@ -50,9 +51,14 @@ Public Class Aktiviteter
     End Sub
 
     Private Sub btnTaBort_Click(sender As Object, e As EventArgs) Handles btnTaBort.Click
+        'Tar bort Aktivitet ur listan
+        lstAktiviteter.Items.RemoveAt(lstAktiviteter.SelectedIndex)
+
+
+        'Tar bort Aktivitet ur databasen
         Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         conn.Open()
-        Dim cmd As New OleDbCommand("DELETE FROM Aktiviteter where ID =" & ID & "")
+        Dim cmd As New OleDbCommand("DELETE FROM Aktiviteter where ID =" & ID & "", conn)
         Dim myreader As OleDbDataReader = cmd.ExecuteReader
 
     End Sub

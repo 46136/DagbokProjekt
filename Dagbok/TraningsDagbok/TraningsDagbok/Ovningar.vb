@@ -21,6 +21,11 @@ Public Class Ovningar
         End While
 
         conn.Close()
+
+        'Auto select första item i ComboBox
+        If cbOvning.Items.Count > 0 Then
+            cbOvning.SelectedIndex = 0
+        End If
     End Sub
 
     Private Sub btnLaggTillOvning_Click(sender As Object, e As EventArgs) Handles btnLaggTillOvning.Click
