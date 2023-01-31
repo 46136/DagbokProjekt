@@ -24,13 +24,13 @@ Partial Class Ovningar
     Private Sub InitializeComponent()
         Me.txtOvning = New System.Windows.Forms.TextBox()
         Me.btnLaggTillOvning = New System.Windows.Forms.Button()
-        Me.lstOvningar = New System.Windows.Forms.ListBox()
         Me.btnTabortOvningar = New System.Windows.Forms.Button()
+        Me.cbOvning = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'txtOvning
         '
-        Me.txtOvning.Location = New System.Drawing.Point(220, 8)
+        Me.txtOvning.Location = New System.Drawing.Point(139, 8)
         Me.txtOvning.Name = "txtOvning"
         Me.txtOvning.Size = New System.Drawing.Size(75, 23)
         Me.txtOvning.TabIndex = 1
@@ -38,38 +38,37 @@ Partial Class Ovningar
         '
         'btnLaggTillOvning
         '
-        Me.btnLaggTillOvning.Location = New System.Drawing.Point(220, 37)
+        Me.btnLaggTillOvning.Location = New System.Drawing.Point(139, 37)
         Me.btnLaggTillOvning.Name = "btnLaggTillOvning"
         Me.btnLaggTillOvning.Size = New System.Drawing.Size(75, 23)
         Me.btnLaggTillOvning.TabIndex = 2
         Me.btnLaggTillOvning.Text = "Lägg till"
         Me.btnLaggTillOvning.UseVisualStyleBackColor = True
         '
-        'lstOvningar
-        '
-        Me.lstOvningar.FormattingEnabled = True
-        Me.lstOvningar.ItemHeight = 15
-        Me.lstOvningar.Location = New System.Drawing.Point(12, 8)
-        Me.lstOvningar.Name = "lstOvningar"
-        Me.lstOvningar.Size = New System.Drawing.Size(194, 169)
-        Me.lstOvningar.TabIndex = 4
-        '
         'btnTabortOvningar
         '
-        Me.btnTabortOvningar.Location = New System.Drawing.Point(220, 154)
+        Me.btnTabortOvningar.Location = New System.Drawing.Point(139, 66)
         Me.btnTabortOvningar.Name = "btnTabortOvningar"
         Me.btnTabortOvningar.Size = New System.Drawing.Size(75, 23)
         Me.btnTabortOvningar.TabIndex = 13
         Me.btnTabortOvningar.Text = "Ta bort"
         Me.btnTabortOvningar.UseVisualStyleBackColor = True
         '
+        'cbOvning
+        '
+        Me.cbOvning.FormattingEnabled = True
+        Me.cbOvning.Location = New System.Drawing.Point(12, 8)
+        Me.cbOvning.Name = "cbOvning"
+        Me.cbOvning.Size = New System.Drawing.Size(121, 23)
+        Me.cbOvning.TabIndex = 14
+        '
         'Ovningar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(303, 186)
+        Me.ClientSize = New System.Drawing.Size(220, 91)
+        Me.Controls.Add(Me.cbOvning)
         Me.Controls.Add(Me.btnTabortOvningar)
-        Me.Controls.Add(Me.lstOvningar)
         Me.Controls.Add(Me.btnLaggTillOvning)
         Me.Controls.Add(Me.txtOvning)
         Me.Name = "Ovningar"
@@ -80,6 +79,6 @@ Partial Class Ovningar
     End Sub
     Friend WithEvents txtOvning As TextBox
     Friend WithEvents btnLaggTillOvning As Button
-    Friend WithEvents lstOvningar As ListBox
     Friend WithEvents btnTabortOvningar As Button
+    Friend WithEvents cbOvning As ComboBox
 End Class
