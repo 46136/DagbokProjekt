@@ -33,7 +33,7 @@ Partial Class Aktiviteter
         '
         'btnLaggTillAktivitet
         '
-        Me.btnLaggTillAktivitet.Location = New System.Drawing.Point(245, 12)
+        Me.btnLaggTillAktivitet.Location = New System.Drawing.Point(144, 12)
         Me.btnLaggTillAktivitet.Name = "btnLaggTillAktivitet"
         Me.btnLaggTillAktivitet.Size = New System.Drawing.Size(75, 23)
         Me.btnLaggTillAktivitet.TabIndex = 1
@@ -42,7 +42,7 @@ Partial Class Aktiviteter
         '
         'txtAktivitet
         '
-        Me.txtAktivitet.Location = New System.Drawing.Point(139, 12)
+        Me.txtAktivitet.Location = New System.Drawing.Point(23, 12)
         Me.txtAktivitet.Name = "txtAktivitet"
         Me.txtAktivitet.Size = New System.Drawing.Size(100, 23)
         Me.txtAktivitet.TabIndex = 2
@@ -50,29 +50,26 @@ Partial Class Aktiviteter
         '
         'btnTaBort
         '
-        Me.btnTaBort.Location = New System.Drawing.Point(245, 37)
+        Me.btnTaBort.Location = New System.Drawing.Point(144, 40)
         Me.btnTaBort.Name = "btnTaBort"
         Me.btnTaBort.Size = New System.Drawing.Size(75, 23)
         Me.btnTaBort.TabIndex = 4
-        Me.btnTaBort.Text = "list"
+        Me.btnTaBort.Text = "ta bort"
         Me.btnTaBort.UseVisualStyleBackColor = True
         '
         'lstAktiviteter
         '
         Me.lstAktiviteter.FormattingEnabled = True
-        Me.lstAktiviteter.Location = New System.Drawing.Point(12, 12)
+        Me.lstAktiviteter.Location = New System.Drawing.Point(12, 41)
         Me.lstAktiviteter.Name = "lstAktiviteter"
         Me.lstAktiviteter.Size = New System.Drawing.Size(121, 23)
         Me.lstAktiviteter.TabIndex = 5
-        '
-        'BindingSource1
-        '
         '
         'Aktiviteter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(326, 76)
+        Me.ClientSize = New System.Drawing.Size(224, 71)
         Me.Controls.Add(Me.lstAktiviteter)
         Me.Controls.Add(Me.btnTaBort)
         Me.Controls.Add(Me.txtAktivitet)

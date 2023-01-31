@@ -1,18 +1,19 @@
 ﻿Imports System.Data.OleDb
 Public Class Aktiviteter
-
     Public Sub Aktiviteter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Databaskoppling
         Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         'C:\Users\Danie\Documents\GitHub\DagbokProjekt\Databas.accdb
         'c:\GIT\DagbokProjekt\Databas\Dagbok.accdb
         conn.Open()
-        Dim cmd As New OleDbCommand("Select Aktivitet from Aktiviteter", conn)
+        Dim cmd As New OleDbCommand("Select ID, Aktivitet from Aktiviteter", conn)
         Dim myreader As OleDbDataReader = cmd.ExecuteReader
         lstAktiviteter.Items.Clear()
 
         While myreader.Read
-            lstAktiviteter.Items.Add(myreader("Aktivitet"))
+            Dim ID As Integer = myreader("ID")
+            Dim Aktivitet As String = myreader("Aktivitet")
+            lstAktiviteter.Items.Add(ID.ToString & " " & Aktivitet)
         End While
         conn.Close()
 
@@ -44,6 +45,14 @@ Public Class Aktiviteter
         cmd.ExecuteNonQuery()
 
         conn.Close()
+
+    End Sub
+
+    Private Sub btnTaBort_Click(sender As Object, e As EventArgs) Handles btnTaBort.Click
+        Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
+        conn.Open()
+        Dim cmd As New OleDbCommand("DELETE FROM Aktiviteter where ID =" & "787")
+        Dim myreader As OleDbDataReader = cmd.ExecuteReader
 
     End Sub
 End Class

@@ -1,4 +1,6 @@
 ﻿Imports System.Data.OleDb
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
 Public Class Ovningar
     Private Sub Ovningar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Connection för ACCESS databas
@@ -10,7 +12,9 @@ Public Class Ovningar
 
         'Sålänge det finns rows att läsa, fyll ComboBox
         While myreader.Read
-            lstOvningar.Items.Add(myreader("Ovning"))
+            Dim ID As Integer = myreader("ID")
+            Dim Ovning As String = myreader("Ovning")
+            lstOvningar.Items.Add(ID.ToString & " " & Ovning)
         End While
         conn.Close()
 
@@ -30,7 +34,7 @@ Public Class Ovningar
         'Connection för ACCESS databas
         Dim conn As New OleDbConnection("PROVIDER=Microsoft.ACE.OLEDB.12.0;DATA Source=c:\GIT\DagbokProjekt\Databas\Dagbok.accdb")
         conn.Open()
-        Dim cmd As New OleDbCommand("DELETE FROM Ovningar where Ovning = ", conn)
+        Dim cmd As New OleDbCommand("DELETE FROM Ovningar WHERE ID = " & lstOvningar.Items(lstOvningar.SelectedItem("ID")), conn)
         Dim myreader As OleDbDataReader = cmd.ExecuteReader
         lstOvningar.Items.Clear()
 

@@ -65,10 +65,8 @@ Public Class NyttPass
 
         'Fyller databas med infon från applikationens fällt
         sql = "INSERT INTO Traning " _
-        &"(Ovning,Sat,Rep,Vikt,Datum,Anteckning,Tid, rpe ) VALUES " _
-        & "('" _
-        & Me.cbOvning.Text & "'," _
-        & Me.cbSet.Text & "," _
+        & "(Ovning,Sat,Rep,Vikt,Datum,Anteckning,Tid, rpe ) VALUES " _
+        & "('" & Me.cbOvning.Text & "'," & Me.cbSet.Text & "," _
         & Me.cbRep.Text & "," _
         & Me.cbVikt.Text & ",'" _
         & Me.dtpDatum.ToString & "','" _
