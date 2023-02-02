@@ -78,7 +78,7 @@ Partial Class Form1
         '
         'btnExpandList
         '
-        Me.btnExpandList.Location = New System.Drawing.Point(210, 12)
+        Me.btnExpandList.Location = New System.Drawing.Point(174, 5)
         Me.btnExpandList.Name = "btnExpandList"
         Me.btnExpandList.Size = New System.Drawing.Size(30, 23)
         Me.btnExpandList.TabIndex = 6
@@ -99,15 +99,15 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(420, 206)
-        Me.Controls.Add(Me.lstGammlaPass)
         Me.Controls.Add(Me.btnExpandList)
+        Me.Controls.Add(Me.lstGammlaPass)
         Me.Controls.Add(Me.btnRedigera)
         Me.Controls.Add(Me.btnTaBort)
         Me.Controls.Add(Me.btnOvningar)
         Me.Controls.Add(Me.btnAktiviteter)
         Me.Controls.Add(Me.btnNyttPass)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Träningsdagbok"
         Me.ResumeLayout(False)
 
     End Sub
